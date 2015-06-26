@@ -1,0 +1,6 @@
+# Site settings
+title: Cosmic Dreamer Music
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://cosmicdreamermusic.com" # the base hostname & protocol for your site
+
+exclude: [deploy.sh, s3_website.yml]
