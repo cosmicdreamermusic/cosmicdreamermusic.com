@@ -1,0 +1,51 @@
+---
+# This great grey matter, that soft pink matter
+---
+
+
+
+// =========================================================================
+// COSMIC DREAMER MUSIC
+// =========================================================================
+
+
+
+// Imports
+// -------------------------------------------------------------------------
+
+// Utils
+@import 'utils/normalize';
+@import 'utils/functions';
+@import 'utils/variables';
+
+// Base
+@import 'base/base';
+
+
+
+// Main
+// -------------------------------------------------------------------------
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	display: table;
+	width: 100%;
+	max-width: rem-calc(600);
+	height: 100%;
+	margin: 0 auto;
+	padding: rem-calc(50);
+}
+
+body {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+body > svg {
+	width: 100%;
+	height: auto;
+}

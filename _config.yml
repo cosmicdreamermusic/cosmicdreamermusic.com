@@ -3,4 +3,7 @@ title: Cosmic Dreamer Music
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cosmicdreamermusic.com" # the base hostname & protocol for your site
 
-exclude: [deploy.sh, s3_website.yml]
+exclude: [deploy.sh, s3_website.yml, node_modules, GEMFILE, Gemfile.lock, Gruntfile.js, package.json, README.md]
+
+sass:
+  style: compressed
