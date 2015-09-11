@@ -1,0 +1,197 @@
+// ==========================================================================
+// NAVIGATION
+// ==========================================================================
+
+
+
+.navigation-menu {
+  position: absolute;
+  width: rem-calc(40);
+  height: rem-calc(40);
+}
+
+
+
+// Menu
+// --------------------------------------------------------------------------
+
+.navigation-list {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: rem-calc(80 40 40);
+  background-color: rgba($color-dark-grey, .96);
+  list-style: none;
+}
+
+.navigation-list > li {
+  display: block;
+  margin-bottom: rem-calc(10);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.navigation-list a {
+  display: block;
+  height: rem-calc(40);
+  color: $color-white;
+  font-size: $font-size-kilo;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+
+// Page header bar
+// --------------------------------------------------------------------------
+
+.page-header-bar .navigation-menu {
+  top: rem-calc(10);
+  right: rem-calc(10);
+
+  @include at-least(small) {
+    top: rem-calc(20);
+    right: rem-calc(20);
+    width: auto;
+  }
+}
+
+.page-header-bar .navigation-list {
+  @include at-least(small) {
+    display: block;
+    position: static;
+    padding: 0;
+    float: right;
+    background: transparent;
+  }
+}
+
+.page-header-bar .navigation-list > li {
+  @include at-least(small) {
+    display: inline-block;
+    margin: rem-calc(0 0 0 20);
+  }
+}
+
+.page-header-bar .navigation-list a {
+  @include at-least(small) {
+    font-size: $font-size-gamma;
+    line-height: rem-calc(40);
+  }
+}
+
+.page-header-bar .navigation-toggle {
+  @include at-least(small) {
+    display: none;
+  }
+}
+
+
+
+// Logo banner
+// --------------------------------------------------------------------------
+
+.logo-banner .navigation-menu {
+  top: rem-calc(20);
+  right: rem-calc(20);
+}
+
+.logo-banner .navigation-list {
+  @include at-least(small) {
+    text-align: center;
+  }
+
+  @include at-least(large) {
+    padding-top: rem-calc(140);
+  }
+}
+
+.logo-banner .navigation-list a {
+  @include at-least(small) {
+    font-size: $font-size-mega;
+  }
+}
+
+
+
+// Toggle
+// --------------------------------------------------------------------------
+
+.navigation-toggle {
+  display: block;
+  position: relative;
+  width: rem-calc(40);
+  height: rem-calc(40);
+  margin: 0;
+  padding: 0;
+  background-color: $color-light-blue;
+}
+
+.navigation-toggle > span,
+.navigation-toggle > span:before,
+.navigation-toggle > span:after {
+  display: block;
+  position: absolute;
+  height: rem-calc(2);
+}
+
+.navigation-toggle > span {
+  top: rem-calc(19);
+  right: rem-calc(8);
+  left: rem-calc(8);
+  transition: background ease-in-out 0s 125ms;
+  background-color: $color-white;
+
+  &:before,
+  &:after {
+    right: 0;
+    left: 0;
+    background-color: $color-white;
+    content: '';
+    transition-duration: 125ms, 125ms;
+    transition-delay: 125ms, 0s;
+  }
+
+  &:before {
+    top: -(rem-calc(8));
+    transition-property: top, transform;
+  }
+
+  &:after {
+    bottom: -(rem-calc(8));
+    transition-property: bottom, transform;
+  }
+}
+
+.navigation-toggle-input {
+  display: none;
+}
+
+.navigation-toggle-input:checked ~ .navigation-toggle > span {
+  background: none;
+
+  &:before,
+  &:after {
+    transition-delay: 0s, 125ms;
+  }
+
+  &:before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    bottom: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation-toggle-input:checked ~ .navigation-list {
+  display: block;
+}

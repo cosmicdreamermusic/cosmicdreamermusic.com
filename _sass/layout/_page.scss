@@ -1,0 +1,69 @@
+// ==========================================================================
+// PAGE
+// ==========================================================================
+
+
+
+.page {
+  position: relative;
+  max-width: rem-calc(1400);
+  margin: 0 auto;
+
+  @include at-least(large) {
+    border: rem-calc(60) solid $color-white;
+  }
+}
+
+
+
+// Header
+// --------------------------------------------------------------------------
+
+.page-header-bar {
+  position: relative;
+  height: rem-calc(60);
+  padding: rem-calc(0 10);
+  background: $color-light-blue;
+
+  @include at-least(small) {
+    height: rem-calc(80);
+    padding: rem-calc(0 20);
+  }
+}
+
+.site-logo {
+  display: block;
+  position: absolute;
+  top: rem-calc(10);
+  left: rem-calc(10);
+  width: rem-calc(40);
+  height: rem-calc(40);
+
+  @include at-least(small) {
+    top: rem-calc(20);
+    left: rem-calc(20);
+    width: rem-calc(300);
+  }
+
+  > svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.site-logo > svg > .expand {
+  display: none;
+
+  @media (min-width: rem-calc(750)) {
+    display: block;
+  }
+}
+
+
+
+// Header
+// --------------------------------------------------------------------------
+
+.page-body {
+  padding: rem-calc(20);
+}

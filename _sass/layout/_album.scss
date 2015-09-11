@@ -1,0 +1,91 @@
+// ==========================================================================
+// ALBUM
+// ==========================================================================
+
+
+
+.album {
+  padding: rem-calc(40 0 20);
+  text-align: center;
+}
+
+.album .album-title {
+  font-size: $font-size-kilo;
+  text-transform: uppercase;
+
+  @include at-least(small) {
+    padding: rem-calc(0 40);
+    font-size: $font-size-mega;
+  }
+}
+
+.album-artist {
+  margin-bottom: rem-calc(20);
+  color: rgba($color-white, .6);
+  font-size: $font-size-beta;
+  text-transform: uppercase;
+
+  @include at-least(small) {
+    font-size: $font-size-kilo;
+  }
+
+  > b {
+    font-style: italic;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+}
+
+.album-release {
+  color: rgba($color-white, .4);
+  font-size: $font-size-delta;
+  font-weight: 400;
+  letter-spacing: rem-calc(2);
+  text-transform: uppercase;
+
+  @include at-least(small) {
+    font-size: $font-size-gamma;
+  }
+
+  > b {
+    color: rgba($color-white, .2);
+    font-weight: 400;
+  }
+}
+
+.album-tracks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    color: rgba($color-white, .8);
+    font-size: $font-size-gamma;
+    text-transform: uppercase;
+
+    @include at-least(small) {
+      font-size: $font-size-alpha;
+    }
+  }
+}
+
+.album-cover {
+  display: inline-block;
+  margin: rem-calc(40 0);
+  border: rem-calc(20) solid $color-white;
+
+  @media (min-width: rem-calc(450)) {
+    margin: rem-calc(40);
+  }
+
+  @include at-least(medium) {
+    max-width: rem-calc(880);
+    border-width: rem-calc(40);
+  }
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}

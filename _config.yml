@@ -7,3 +7,6 @@ exclude: [deploy.sh, s3_website.yml, node_modules, GEMFILE, Gemfile.lock, Gruntf
 
 sass:
   style: compressed
+
+gems:
+  - octopress-autoprefixer

@@ -16,6 +16,23 @@ module.exports = function(grunt) {
       jekyllDeploy: {
         command: 's3_website push'
       }
+    },
+
+    scsslint: {
+      allFiles: [
+        'css/*.scss',
+        '_sass/**/*.scss'
+      ],
+      options: {
+        bundleExec: false,
+        config: '.scss-lint.yml',
+        colorizeOutput: true,
+        exclude: [
+          '_sass/utils/_functions.scss',
+          '_sass/utils/_normalize.scss',
+          'css/styles.scss'
+        ]
+      }
     }
   });
 
@@ -24,13 +41,17 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
+    'scsslint',
     'shell:jekyllBuild'
   ]);
 
   grunt.registerTask('deploy', [
+    'scsslint',
     'shell:jekyllBuild',
     'shell:jekyllDeploy'
   ]);
+
+  grunt.registerTask('test', 'scsslint');
 
   grunt.registerTask('default', 'build');
 };
