@@ -5,6 +5,8 @@ url: "http://cosmicdreamermusic.com" # the base hostname & protocol for your sit
 
 exclude: [deploy.sh, s3_website.yml, node_modules, GEMFILE, Gemfile.lock, Gruntfile.js, package.json, README.md]
 
+minify_html: false
+
 sass:
   style: compressed
 

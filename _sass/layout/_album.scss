@@ -5,24 +5,30 @@
 
 
 .album {
-  padding: rem-calc(40 0 20);
+  padding: rem-calc(20 0);
   text-align: center;
+
+  @include at-least(small) {
+    padding: rem-calc(60 0);
+  }
 }
 
 .album .album-title {
+  margin-bottom: rem-calc(10);
   font-size: $font-size-kilo;
   text-transform: uppercase;
 
   @include at-least(small) {
-    padding: rem-calc(0 40);
+    padding: 0 20%;
     font-size: $font-size-mega;
   }
 }
 
 .album-artist {
-  margin-bottom: rem-calc(20);
+  margin-bottom: rem-calc(30);
   color: rgba($color-white, .6);
   font-size: $font-size-beta;
+  font-weight: 400;
   text-transform: uppercase;
 
   @include at-least(small) {
@@ -31,12 +37,13 @@
 
   > b {
     font-style: italic;
-    font-weight: normal;
+    font-weight: 400;
     text-transform: lowercase;
   }
 }
 
 .album-release {
+  margin-bottom: rem-calc(70);
   color: rgba($color-white, .4);
   font-size: $font-size-delta;
   font-weight: 400;
@@ -71,15 +78,11 @@
 
 .album-cover {
   display: inline-block;
-  margin: rem-calc(40 0);
+  margin-bottom: rem-calc(60);
   border: rem-calc(20) solid $color-white;
 
-  @media (min-width: rem-calc(450)) {
-    margin: rem-calc(40);
-  }
-
   @include at-least(medium) {
-    max-width: rem-calc(880);
+    max-width: rem-calc(600);
     border-width: rem-calc(40);
   }
 

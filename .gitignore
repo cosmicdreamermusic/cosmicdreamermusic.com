@@ -1,5 +1,7 @@
-Gemfile.lock
+bower_components
 node_modules
+Gemfile.lock
 s3_website.yml
 .sass-cache
 _site
+.DS_Store

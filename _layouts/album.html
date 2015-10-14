@@ -1,39 +1,29 @@
-<!doctype html>
-<html class="no-js" lang="">
-  {% include head.html %}
-  <body>
-    <div class="page">
-      <div class="page-header">
-        <div class="page-header-bar">
-          {% include logo.html %}
-          {% include navigation.html %}
-        </div>
-      </div>
-      <div class="page-body">
-        <div class="album">
-          <h2 class="album-title">{{ page.title }}</h2>
-          <h2 class="album-artist"><b>by</b> {{ page.artist }}</h2>
-          <h3 class="album-release">{{ page.release }} <b>{{ page.catalog }}</b></h3>
-          <div class="album-cover">
-            <img
-            src="{{ site.baseurl }}/img/{{ page.cover }}_sm.jpg"
-            srcset="{{ site.baseurl }}/img/{{ page.cover }}.jpg 800w,
-                    {{ site.baseurl }}/img/{{ page.cover }}_med.jpg 600w,
-                    {{ site.baseurl }}/img/{{ page.cover }}_sm.jpg 400w"
-            sizes="(min-width: 40.625rem) 50vw,
-                  100vw"
-            alt="{{ page.title }}"
-            />
-        </div>
-        <ul class="album-tracks">
-          {% for track in page.tracks %}
-            <li>{{ track }}</li>
-          {% endfor %}
-        </ul>
-        {{ content }}
-        </div>
-      </div>
+---
+layout: default
+---
+
+{% include page-header.html %}
+<div class="page-body">
+  <div class="album">
+    <h2 class="album-title">{{ page.title }}</h2>
+    <h2 class="album-artist"><b>by</b> {{ page.artist }}</h2>
+    <h3 class="album-release">{{ page.release }} <b>{{ page.catalog }}</b></h3>
+    <div class="album-cover">
+      <img
+        src="{{ site.baseurl }}/img/{{ page.cover }}_sm.jpg"
+        srcset="{{ site.baseurl }}/img/{{ page.cover }}_med.jpg 600w,
+                {{ site.baseurl }}/img/{{ page.cover }}_sm.jpg 400w"
+        sizes="(min-width: 40.625rem) 50vw,
+              100vw"
+        alt="{{ page.title }}"
+      />
     </div>
-  </body>
-</html>
+    <ul class="album-tracks">
+      {% for track in page.tracks %}
+        <li>{{ track }}</li>
+      {% endfor %}
+    </ul>
+    {{ content }}
+  </div>
+</div>
 

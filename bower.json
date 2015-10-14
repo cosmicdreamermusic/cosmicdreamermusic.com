@@ -1,0 +1,13 @@
+{
+  "name": "cosmicdreamermusic.com",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cosmicdreamermusic/cosmicdreamermusic.com",
+  "authors": [
+    "Nick Christus <nick.christus@gmail.com>"
+  ],
+  "description": "Cosmic Dreamer Music",
+  "private": true,
+  "devDependencies": {
+    "picturefill": "scottjehl/picturefill#~3.0.1"
+  }
+}
