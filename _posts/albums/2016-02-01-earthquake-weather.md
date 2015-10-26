@@ -5,6 +5,7 @@ artist: Onsen
 title: Earthquake Weather
 release: February, 2016
 cover: CDM001
+artist-photo: onsen
 catalog: CDM001
 tracks:
 - What Fortunes

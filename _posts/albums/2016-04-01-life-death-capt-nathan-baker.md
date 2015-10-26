@@ -5,6 +5,7 @@ artist: Allelujah
 title: The Life and Death of Capt. Nathan Baker
 release: April, 2016
 cover: CDM003
+artist-photo: allelujah
 catalog: CDM003
 tracks:
 - Alright, Alright

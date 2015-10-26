@@ -21,7 +21,7 @@
 
 .artists-list > li {
   @include at-least(small) {
-    width: 33%;
+    width: 33.33%;
   }
 }
 

@@ -5,6 +5,7 @@ artist: The Dan Ryan
 title: The Dan Ryan LP
 release: March, 2016
 cover: CDM002
+artist-photo: the-dan-ryan
 catalog: CDM002
 tracks:
 - Fleeting
