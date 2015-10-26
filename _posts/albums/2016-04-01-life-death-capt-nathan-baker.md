@@ -7,12 +7,12 @@ release: April, 2016
 cover: CDM003
 catalog: CDM003
 tracks:
-- Alright, Alright 
-- Chariots of Fire 
+- Alright, Alright
+- Chariots of Fire
 - Hero’s Heroes
-- Band of Brother Blues 
-- Cosmic Dreamer 
+- Band of Brother Blues
+- Cosmic Dreamer
 - Dance with Me
-- The Holy Ghost is a Mind Blower 
+- The Holy Ghost is a Mind Blower
 - Warrior
 ---

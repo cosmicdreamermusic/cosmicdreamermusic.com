@@ -1,0 +1,54 @@
+// ==========================================================================
+// ARTISTS
+// ==========================================================================
+
+
+
+// List
+// --------------------------------------------------------------------------
+
+.artists-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.artists-list > li {
+  @include at-least(small) {
+    width: 33%;
+  }
+}
+
+.artists-list > li a {
+  display: block;
+  position: relative;
+}
+
+.artists-list > li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+// Card
+// --------------------------------------------------------------------------
+
+.artists-list .artists-list-card {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: rem-calc(10 20);
+  color: $color-white;
+  background: rgba($color-dark-grey, .75);
+  font-size: $font-size-kilo;
+}

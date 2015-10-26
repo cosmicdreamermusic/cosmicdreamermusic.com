@@ -1,5 +1,5 @@
 <ul class="albums-list">
-  {% for post in site.categories.albums %}
+  {% for post in site.categories.albums reversed offset:albumsListOffset limit:albumListLimit %}
     <li>
       <a href="{{ post.url }}">
         <div class="albums-list-card">

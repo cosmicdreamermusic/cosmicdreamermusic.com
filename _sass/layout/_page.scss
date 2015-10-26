@@ -61,9 +61,43 @@
 
 
 
-// Header
+// Body
 // --------------------------------------------------------------------------
 
-.page-body {
-  padding: rem-calc(20);
+// .page-body {
+//   padding: rem-calc(20);
+
+//   @include at-least(small) {
+//     padding: rem-calc(40);
+//   }
+// }
+
+.page-title {
+  margin: rem-calc(40 0);
+  padding: rem-calc(0 20);
+  font-size: $font-size-kilo;
+  text-transform: uppercase;
+
+  @include at-least(small) {
+    padding: rem-calc(0 40);
+  }
 }
+
+.page-quote {
+  margin: 0;
+  padding: rem-calc(20);
+  font-size: $font-size-gamma;
+  line-height: 1.5;
+
+  @include at-least(medium) {
+    padding: rem-calc(30 75);
+    font-size: $font-size-beta;
+  }
+
+  @include at-least(large) {
+    padding: rem-calc(50 100);
+    font-size: $font-size-alpha;
+  }
+}
+
+
