@@ -145,8 +145,8 @@
   margin: rem-calc(0 0 10);
   color: rgba($color-white, .6);
   font-size: $font-size-beta;
-  font-weight: 300;
   font-style: italic;
+  font-weight: 300;
 
   @include at-least(small) {
     font-size: $font-size-alpha;

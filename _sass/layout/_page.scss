@@ -71,9 +71,9 @@
   text-transform: uppercase;
 
   @include at-least(small) {
-    font-size: $font-size-mega;
     margin: rem-calc(40 0);
     padding: rem-calc(0 40);
+    font-size: $font-size-mega;
   }
 }
 
@@ -106,14 +106,27 @@
 // --------------------------------------------------------------------------
 
 .page-footer {
-  @include clearfix;
+  display: table;
+  width: 100%;
   padding: rem-calc(60 40);
-  background: #222226;
-  color: rgba($color-white, 0.6);
+  background: rgba($color-white, .95);
+  color: rgba($color-dark-grey, .8);
+}
+
+.page-footer-meta,
+.page-footer-links {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-footer-links {
+  text-align: right;
 }
 
 .page-footer-icon-link {
-  float: right;
+  display: inline-block;
+  opacity: .8;
+  vertical-align: middle;
 
   > svg {
     display: block;
