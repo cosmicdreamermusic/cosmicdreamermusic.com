@@ -64,40 +64,58 @@
 // Body
 // --------------------------------------------------------------------------
 
-// .page-body {
-//   padding: rem-calc(20);
-
-//   @include at-least(small) {
-//     padding: rem-calc(40);
-//   }
-// }
-
 .page-title {
-  margin: rem-calc(40 0);
+  margin: rem-calc(20 0);
   padding: rem-calc(0 20);
   font-size: $font-size-kilo;
   text-transform: uppercase;
 
   @include at-least(small) {
+    font-size: $font-size-mega;
+    margin: rem-calc(40 0);
     padding: rem-calc(0 40);
   }
 }
 
 .page-quote {
   margin: 0;
-  padding: rem-calc(20);
+  padding: rem-calc(40);
+  color: rgba($color-white, .8);
   font-size: $font-size-gamma;
   line-height: 1.5;
 
-  @include at-least(medium) {
-    padding: rem-calc(30 75);
+  @include at-least(small) {
+    padding: rem-calc(50 80);
     font-size: $font-size-beta;
   }
 
-  @include at-least(large) {
-    padding: rem-calc(50 100);
+  @include at-least(medium) {
+    padding: rem-calc(75 100);
     font-size: $font-size-alpha;
+  }
+
+  @include at-least(large) {
+    padding: rem-calc(100 150);
+    font-size: $font-size-kilo;
   }
 }
 
 
+
+// Footer
+// --------------------------------------------------------------------------
+
+.page-footer {
+  @include clearfix;
+  padding: rem-calc(60 40);
+  background: #222226;
+  color: rgba($color-white, 0.6);
+}
+
+.page-footer-icon-link {
+  float: right;
+
+  > svg {
+    display: block;
+  }
+}

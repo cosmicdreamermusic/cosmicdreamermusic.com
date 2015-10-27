@@ -23,7 +23,22 @@ layout: default
         <li>{{ track }}</li>
       {% endfor %}
     </ul>
-    {{ content }}
+    <div class="artist-photo">
+      <img
+        src="{{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg"
+        srcset="{{ site.baseurl }}/img/{{ page.artist-photo }}.jpg 800w,
+                {{ site.baseurl }}/img/{{ page.artist-photo }}_med.jpg 600w,
+                {{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg 400w"
+        sizes="(min-width: 40.625rem) 50vw,
+              100vw"
+        alt="{{ page.artist }}"
+      />
+    </div>
+    {% if page.bio %}
+    <div class="artist-bio">
+      <h3 class="artist-bio-header">About {{ page.artist }}</h3>
+      {{ content }}
+    </div>
+    {% endif %}
   </div>
 </div>
-

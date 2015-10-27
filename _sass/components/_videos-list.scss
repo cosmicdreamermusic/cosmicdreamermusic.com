@@ -15,7 +15,11 @@
 
 .videos-list > li {
   display: block;
-  margin-bottom: rem-calc(80);
+  margin-bottom: rem-calc(20);
+
+  @include at-least(small) {
+    margin-bottom: rem-calc(40);
+  }
 
   &:last-child {
     margin: 0;
@@ -40,7 +44,11 @@
 
 .video-meta {
   padding: rem-calc(10 20);
-  background: $color-dark-blue;
+  background: rgba($color-white, .2);
+
+  @include at-least(small) {
+    font-size: $font-size-beta;
+  }
 }
 
 .video-title {

@@ -5,11 +5,11 @@
 
 
 .album {
-  padding: rem-calc(20 0);
+  padding: rem-calc(40 0 0);
   text-align: center;
 
   @include at-least(small) {
-    padding: rem-calc(60 0);
+    padding: rem-calc(60 0 0);
   }
 }
 
@@ -43,7 +43,7 @@
 }
 
 .album-release {
-  margin-bottom: rem-calc(70);
+  margin-bottom: rem-calc(50);
   color: rgba($color-white, .4);
   font-size: $font-size-delta;
   font-weight: 400;
@@ -51,6 +51,7 @@
   text-transform: uppercase;
 
   @include at-least(small) {
+    margin-bottom: rem-calc(70);
     font-size: $font-size-gamma;
   }
 
@@ -61,17 +62,25 @@
 }
 
 .album-tracks {
-  margin: 0;
+  margin: rem-calc(0 0 80);
   padding: 0;
   list-style: none;
 
+  @include at-least(small) {
+    margin-bottom: rem-calc(100);
+  }
+
   > li {
     color: rgba($color-white, .8);
-    font-size: $font-size-gamma;
+    font-size: $font-size-beta;
     text-transform: uppercase;
 
     @include at-least(small) {
       font-size: $font-size-alpha;
+    }
+
+    @include at-least(medium) {
+      font-size: $font-size-kilo;
     }
   }
 }
@@ -90,5 +99,80 @@
     display: block;
     width: 100%;
     height: auto;
+  }
+}
+
+
+
+// Artist
+// --------------------------------------------------------------------------
+
+.album .artist-photo {
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.album .artist-bio {
+  padding: rem-calc(20);
+  text-align: left;
+}
+
+.artist-bio > p {
+  margin: rem-calc(0 0 20);
+  color: rgba($color-white, .8);
+
+  @include at-least(small) {
+    font-size: $font-size-beta;
+  }
+
+  @include at-least(medium) {
+    font-size: $font-size-alpha;
+  }
+
+  @include at-least(large) {
+    font-size: $font-size-kilo;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.artist-bio-header {
+  margin: rem-calc(0 0 10);
+  color: rgba($color-white, .6);
+  font-size: $font-size-beta;
+  font-weight: 300;
+  font-style: italic;
+
+  @include at-least(small) {
+    font-size: $font-size-alpha;
+  }
+
+  @include at-least(medium) {
+    font-size: $font-size-kilo;
+  }
+
+  @include at-least(large) {
+    font-size: $font-size-mega;
+  }
+}
+
+.album .artist-photo + .artist-bio {
+  padding: rem-calc(40 20);
+
+  @include at-least(small) {
+    padding: rem-calc(40);
+  }
+
+  @include at-least(medium) {
+    padding: rem-calc(60 100);
+  }
+
+  @include at-least(large) {
+    padding: rem-calc(80 160);
   }
 }

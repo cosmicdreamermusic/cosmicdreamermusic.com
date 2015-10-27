@@ -7,6 +7,7 @@ release: February, 2016
 cover: CDM001
 artist-photo: onsen
 catalog: CDM001
+bio: false
 tracks:
 - What Fortunes
 - Mahabharata

@@ -3,16 +3,18 @@ layout: page
 title: Videos
 ---
 
-<ul class="videos-list">
-  {% for post in site.categories.videos %}
-  <li class="video">
-    <div class="video-meta">
-      <span class="video-title"><b>{{ post.artist }}</b> - {{ post.title }}</span>
-      <p class="video-description">{{ post.description }}</p>
-    </div>
-    <div class="video-embed">
-      <iframe src="{{ post.link }}" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </li>
-  {% endfor %}
-</ul>
+<div class="videos">
+  <ul class="videos-list">
+    {% for post in site.categories.videos %}
+    <li class="video">
+      <div class="video-meta">
+        <span class="video-title"><b>{{ post.artist }}</b> - {{ post.title }}</span>
+        <p class="video-description">{{ post.description }}</p>
+      </div>
+      <div class="video-embed">
+        <iframe src="{{ post.link }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

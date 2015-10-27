@@ -7,6 +7,7 @@ release: April, 2016
 cover: CDM003
 artist-photo: allelujah
 catalog: CDM003
+bio: false
 tracks:
 - Alright, Alright
 - Chariots of Fire
