@@ -1,0 +1,134 @@
+// ==========================================================================
+// PAGE
+// ==========================================================================
+
+
+
+.page {
+  position: relative;
+  max-width: rem-calc(1400);
+  margin: 0 auto;
+
+  @include at-least(large) {
+    border: rem-calc(60) solid $color-white;
+  }
+}
+
+
+
+// Header
+// --------------------------------------------------------------------------
+
+.page-header-bar {
+  position: relative;
+  height: rem-calc(60);
+  padding: rem-calc(0 10);
+  background: $color-light-blue;
+
+  @include at-least(small) {
+    height: rem-calc(80);
+    padding: rem-calc(0 20);
+  }
+}
+
+.site-logo {
+  display: block;
+  position: absolute;
+  top: rem-calc(10);
+  left: rem-calc(10);
+  width: rem-calc(40);
+  height: rem-calc(40);
+
+  @include at-least(small) {
+    top: rem-calc(20);
+    left: rem-calc(20);
+    width: rem-calc(300);
+  }
+
+  > svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.site-logo > svg > .expand {
+  display: none;
+
+  @media (min-width: rem-calc(750)) {
+    display: block;
+  }
+}
+
+
+
+// Body
+// --------------------------------------------------------------------------
+
+.page-title {
+  margin: rem-calc(20 0);
+  padding: rem-calc(0 20);
+  font-size: $font-size-kilo;
+  text-transform: uppercase;
+
+  @include at-least(small) {
+    margin: rem-calc(40 0);
+    padding: rem-calc(0 40);
+    font-size: $font-size-mega;
+  }
+}
+
+.page-quote {
+  margin: 0;
+  padding: rem-calc(40);
+  color: rgba($color-white, .8);
+  font-size: $font-size-gamma;
+  line-height: 1.5;
+
+  @include at-least(small) {
+    padding: rem-calc(50 80);
+    font-size: $font-size-beta;
+  }
+
+  @include at-least(medium) {
+    padding: rem-calc(75 100);
+    font-size: $font-size-alpha;
+  }
+
+  @include at-least(large) {
+    padding: rem-calc(100 150);
+    font-size: $font-size-kilo;
+  }
+}
+
+
+
+// Footer
+// --------------------------------------------------------------------------
+
+.page-footer {
+  display: table;
+  width: 100%;
+  padding: rem-calc(60 40);
+  background: rgba($color-white, .95);
+  color: rgba($color-dark-grey, .8);
+}
+
+.page-footer-meta,
+.page-footer-links {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.page-footer-links {
+  text-align: right;
+}
+
+.page-footer-icon-link {
+  display: inline-block;
+  opacity: .8;
+  vertical-align: middle;
+
+  > svg {
+    display: block;
+  }
+}

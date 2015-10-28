@@ -2,7 +2,37 @@
 // VARIABLES
 // =========================================================================
 
-// Colors
-// -------------------------------------------------------------------------
 
-$color-light-blue: #44cae0;
+
+// Colors
+// --------------------------------------------------------------------------
+
+$color-white:         #fff;
+$color-light-blue: 		#44cae0;
+$color-dark-blue:     #36536f;
+$color-dark-grey:			#303036;
+
+
+
+// Font-size scale (Based on http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/)
+// ---------------------------------------------------------------------------
+
+$font-size-giga:      rem-calc(48);
+$font-size-mega:      rem-calc(36);
+$font-size-kilo:      rem-calc(24);
+$font-size-alpha:     rem-calc(21);
+$font-size-beta:      rem-calc(18);
+$font-size-gamma:     rem-calc(16);
+$font-size-delta:     rem-calc(14);
+$font-size-epsilon:   rem-calc(12);
+$font-size-zeta:      rem-calc(11);
+$font-size-milli:     rem-calc(10);
+
+
+
+// Breakpoints
+// --------------------------------------------------------------------------
+
+$bp-small: rem-calc(650);
+$bp-medium: rem-calc(992);
+$bp-large: rem-calc(1200);

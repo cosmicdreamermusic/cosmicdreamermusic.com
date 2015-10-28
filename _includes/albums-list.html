@@ -1,0 +1,23 @@
+<ul class="albums-list">
+  {% for post in site.categories.albums reversed offset:albumsListOffset limit:albumListLimit %}
+    <li>
+      <a href="{{ post.url }}">
+        <div class="albums-list-card">
+          <div class="albums-list-info">
+            <h2 class="album-artist">{{ post.artist }}</h2>
+            <h3 class="album-title">{{ post.title }}</h3>
+          </div>
+        </div>
+        <img
+          src="{{ site.baseurl }}/img/{{ post.cover }}_sm.jpg"
+          srcset="{{ site.baseurl }}/img/{{ post.cover }}.jpg 800w,
+                  {{ site.baseurl }}/img/{{ post.cover }}_med.jpg 600w,
+                  {{ site.baseurl }}/img/{{ post.cover }}_sm.jpg 400w"
+          sizes="(min-width: 40.625rem) 50vw,
+                100vw"
+          alt="{{ post.title }}"
+        />
+      </a>
+    </li>
+  {% endfor %}
+</ul>

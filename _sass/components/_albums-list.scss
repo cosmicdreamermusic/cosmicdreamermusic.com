@@ -1,0 +1,92 @@
+// ==========================================================================
+// ALBUMS
+// ==========================================================================
+
+
+
+// List
+// --------------------------------------------------------------------------
+
+.albums-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include at-least(small) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.albums-list > li {
+  position: relative;
+
+  @include at-least(small) {
+    width: 50%;
+  }
+}
+
+.albums-list > li a {
+  display: block;
+}
+
+.albums-list > li img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+// Card
+// --------------------------------------------------------------------------
+
+.albums-list .albums-list-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color-dark-grey, .3);
+  text-align: center;
+
+  &:hover {
+    background: rgba($color-dark-grey, .6);
+  }
+}
+
+.albums-list .albums-list-info {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  padding: rem-calc(20);
+  transform: translateY(-50%);
+}
+
+.albums-list-card .album-artist,
+.albums-list-card .album-title {
+  margin: 0;
+  color: $color-white;
+}
+
+.albums-list-card .album-artist {
+  font-size: $font-size-kilo;
+  text-transform: uppercase;
+
+  @include at-least(large) {
+    font-size: $font-size-mega;
+  }
+}
+
+.albums-list-card .album-title {
+  font-size: $font-size-beta;
+  font-style: italic;
+  font-weight: 300;
+
+  @include at-least(large) {
+    font-size: $font-size-alpha;
+  }
+}

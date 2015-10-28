@@ -17,35 +17,21 @@
 @import 'utils/normalize';
 @import 'utils/functions';
 @import 'utils/variables';
+@import 'utils/mixins';
 
 // Base
 @import 'base/base';
+@import 'base/typography';
+@import 'base/z-index';
 
+// Components
+@import "components/albums-list";
+@import "components/artists-list";
+@import 'components/logo-banner';
+@import 'components/videos-list';
 
-
-// Main
-// -------------------------------------------------------------------------
-
-* {
-	box-sizing: border-box;
-}
-
-html {
-	display: table;
-	width: 100%;
-	max-width: rem-calc(600);
-	height: 100%;
-	margin: 0 auto;
-	padding: rem-calc(50);
-}
-
-body {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
-}
-
-body > svg {
-	width: 100%;
-	height: auto;
-}
+// Layout
+@import 'layout/album';
+@import 'layout/navigation';
+@import 'layout/page';
+@import 'layout/videos';

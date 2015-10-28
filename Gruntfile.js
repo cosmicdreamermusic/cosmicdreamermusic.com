@@ -16,21 +16,52 @@ module.exports = function(grunt) {
       jekyllDeploy: {
         command: 's3_website push'
       }
+    },
+
+    scsslint: {
+      allFiles: [
+        'css/*.scss',
+        '_sass/**/*.scss'
+      ],
+      options: {
+        bundleExec: false,
+        config: '.scss-lint.yml',
+        colorizeOutput: true,
+        exclude: [
+          '_sass/utils/_functions.scss',
+          '_sass/utils/_normalize.scss',
+          'css/styles.scss'
+        ]
+      }
+    },
+
+    uglify: {
+      picturefill: {
+        files: {
+          'js/picturefill.min.js': 'bower_components/picturefill/dist/picturefill.min.js'
+        }
+      }
     }
   });
 
   grunt.registerTask('serve', [
+    'uglify:picturefill',
     'shell:jekyllServe'
   ]);
 
   grunt.registerTask('build', [
+    'uglify:picturefill',
+    'scsslint',
     'shell:jekyllBuild'
   ]);
 
   grunt.registerTask('deploy', [
+    'uglify:picturefill',
+    'scsslint',
     'shell:jekyllBuild',
     'shell:jekyllDeploy'
   ]);
 
+  grunt.registerTask('test', 'scsslint');
   grunt.registerTask('default', 'build');
 };
