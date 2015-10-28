@@ -2,7 +2,15 @@
   {% for post in site.categories.artists %}
     <li>
       <a href="{{ post.url }}">
-        <img src="{{ site.baseurl }}/img/{{ post.artist-photo }}_sq.jpg" alt="{{ post.artist }}" width="450" height="450">
+        <img
+          src="{{ site.baseurl }}/img/{{ post.artist-photo }}_sq_sm.jpg" width="450" height="450"
+          srcset="{{ site.baseurl }}/img/{{ post.artist-photo }}_sq.jpg 800w,
+                  {{ site.baseurl }}/img/{{ post.artist-photo }}_sq_med.jpg 600w,
+                  {{ site.baseurl }}/img/{{ post.artist-photo }}_sq_sm.jpg 400w"
+          sizes="(min-width: 40.625rem) 33.33vw,
+                100vw"
+          alt="{{ post.artist }}"
+        />
         <div class="artists-list-card">
           {{ post.artist }}
         </div>
