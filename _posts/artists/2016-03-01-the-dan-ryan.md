@@ -1,6 +1,6 @@
 ---
 layout: artist
-category: albums
+category: artists
 artist: The Dan Ryan
 title: The Dan Ryan LP
 release: March, 2016

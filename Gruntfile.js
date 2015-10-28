@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         command: 'jekyll serve'
       },
       jekyllDeploy: {
-        command: 's3_website push'
+        command: 's3_website push --force'
       }
     },
 

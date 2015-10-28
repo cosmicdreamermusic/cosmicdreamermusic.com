@@ -1,5 +1,5 @@
 <ul class="albums-list">
-  {% for post in site.categories.albums reversed offset:albumsListOffset limit:albumListLimit %}
+  {% for post in site.categories.artists reversed offset:artistsListOffset limit:artistsListLimit %}
     <li>
       <a href="{{ post.url }}">
         <div class="albums-list-card">
@@ -9,7 +9,7 @@
           </div>
         </div>
         <img
-          src="{{ site.baseurl }}/img/{{ post.cover }}_sm.jpg"
+          src="{{ site.baseurl }}/img/{{ post.cover }}_sm.jpg" width="400" height="400"
           srcset="{{ site.baseurl }}/img/{{ post.cover }}.jpg 800w,
                   {{ site.baseurl }}/img/{{ post.cover }}_med.jpg 600w,
                   {{ site.baseurl }}/img/{{ post.cover }}_sm.jpg 400w"

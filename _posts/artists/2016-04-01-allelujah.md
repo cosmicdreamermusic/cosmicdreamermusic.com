@@ -1,6 +1,6 @@
 ---
 layout: artist
-category: albums
+category: artists
 artist: Allelujah
 title: The Death and Life of Capt. Nathan Baker
 release: April, 2016

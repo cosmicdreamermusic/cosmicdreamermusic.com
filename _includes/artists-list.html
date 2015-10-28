@@ -1,8 +1,8 @@
 <ul class="artists-list">
-  {% for post in site.categories.albums %}
+  {% for post in site.categories.artists %}
     <li>
       <a href="{{ post.url }}">
-        <img src="{{ site.baseurl }}/img/{{ post.artist-photo }}_sq.jpg" alt="{{ post.artist }}">
+        <img src="{{ site.baseurl }}/img/{{ post.artist-photo }}_sq.jpg" alt="{{ post.artist }}" width="450" height="450">
         <div class="artists-list-card">
           {{ post.artist }}
         </div>
