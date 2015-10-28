@@ -1,5 +1,5 @@
 ---
-layout: album
+layout: artist
 category: albums
 artist: Allelujah
 title: The Death and Life of Capt. Nathan Baker

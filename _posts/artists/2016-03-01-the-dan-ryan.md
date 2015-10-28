@@ -1,5 +1,5 @@
 ---
-layout: album
+layout: artist
 category: albums
 artist: The Dan Ryan
 title: The Dan Ryan LP

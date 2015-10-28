@@ -2,10 +2,6 @@
 
 scss_files: "_sass/**/*.scss"
 
-exclude:
- - "_sass/utils/_functions.scss"
- - "_sass/utils/_normalize.scss"
-
 linters:
   BangFormat:
     enabled: true
