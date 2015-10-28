@@ -1,11 +1,5 @@
----
-# This great grey matter, that soft pink matter
----
-
-
-
 // =========================================================================
-// COSMIC DREAMER MUSIC
+// CRITICAL CSS
 // =========================================================================
 
 
@@ -14,14 +8,20 @@
 // -------------------------------------------------------------------------
 
 // Utils
+@import 'utils/normalize';
 @import 'utils/functions';
 @import 'utils/variables';
 @import 'utils/mixins';
 
+// Base
+@import 'base/base';
+@import 'base/typography';
+@import 'base/z-index';
+
 // Components
-@import "components/artists-list";
-@import 'components/videos-list';
+@import 'components/albums-list';
+@import 'components/logo-banner';
 
 // Layout
-@import 'layout/album';
-@import 'layout/videos';
+@import 'layout/navigation';
+@import 'layout/page';

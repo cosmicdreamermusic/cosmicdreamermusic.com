@@ -18,6 +18,18 @@ module.exports = function(grunt) {
       }
     },
 
+    sass: {
+      options: {
+        sourceMap: false,
+        outputStyle: 'compressed'
+      },
+      dist: {
+        files: {
+          '_includes/critical.css': '_sass/critical.scss'
+        }
+      }
+    },
+
     scsslint: {
       allFiles: [
         'css/*.scss',
@@ -45,17 +57,20 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('serve', [
+    'sass',
     'uglify:picturefill',
     'shell:jekyllServe'
   ]);
 
   grunt.registerTask('build', [
+    'sass',
     'uglify:picturefill',
     'scsslint',
     'shell:jekyllBuild'
   ]);
 
   grunt.registerTask('deploy', [
+    'sass',
     'uglify:picturefill',
     'scsslint',
     'shell:jekyllBuild',

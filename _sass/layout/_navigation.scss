@@ -6,8 +6,16 @@
 
 .navigation-menu {
   position: absolute;
+  top: rem-calc(10);
+  right: rem-calc(10);
   width: rem-calc(40);
   height: rem-calc(40);
+
+  @include at-least(small) {
+    top: rem-calc(20);
+    right: rem-calc(20);
+    width: auto;
+  }
 }
 
 
@@ -26,11 +34,24 @@
   padding: rem-calc(80 40 40);
   background-color: rgba($color-dark-grey, .96);
   list-style: none;
+
+  @include at-least(small) {
+    display: block;
+    position: static;
+    padding: 0;
+    float: right;
+    background: transparent;
+  }
 }
 
 .navigation-list > li {
   display: block;
   margin-bottom: rem-calc(10);
+
+  @include at-least(small) {
+    display: inline-block;
+    margin: rem-calc(0 0 0 20);
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -44,77 +65,10 @@
   font-size: $font-size-kilo;
   text-decoration: none;
   text-transform: uppercase;
-}
 
-
-
-// Page header bar
-// --------------------------------------------------------------------------
-
-.page-header-bar .navigation-menu {
-  top: rem-calc(10);
-  right: rem-calc(10);
-
-  @include at-least(small) {
-    top: rem-calc(20);
-    right: rem-calc(20);
-    width: auto;
-  }
-}
-
-.page-header-bar .navigation-list {
-  @include at-least(small) {
-    display: block;
-    position: static;
-    padding: 0;
-    float: right;
-    background: transparent;
-  }
-}
-
-.page-header-bar .navigation-list > li {
-  @include at-least(small) {
-    display: inline-block;
-    margin: rem-calc(0 0 0 20);
-  }
-}
-
-.page-header-bar .navigation-list a {
   @include at-least(small) {
     font-size: $font-size-gamma;
     line-height: rem-calc(40);
-  }
-}
-
-.page-header-bar .navigation-toggle {
-  @include at-least(small) {
-    display: none;
-  }
-}
-
-
-
-// Logo banner
-// --------------------------------------------------------------------------
-
-.logo-banner .navigation-menu {
-  top: rem-calc(20);
-  right: rem-calc(20);
-}
-
-.logo-banner .navigation-list {
-  @include at-least(small) {
-    text-align: center;
-  }
-
-  @include at-least(large) {
-    padding-top: rem-calc(140);
-  }
-}
-
-.logo-banner .navigation-list a {
-  @include at-least(small) {
-    font-size: $font-size-mega;
   }
 }
 
@@ -131,6 +85,10 @@
   margin: 0;
   padding: 0;
   background-color: $color-light-blue;
+
+  @include at-least(small) {
+    display: none;
+  }
 }
 
 .navigation-toggle > span,
