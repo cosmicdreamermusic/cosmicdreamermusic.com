@@ -7,6 +7,7 @@ release: March, 2016
 cover: CDM002
 artist-photo: the-dan-ryan
 catalog: CDM002
+formats: LP / Digital
 bio: true
 tracks:
 - Fleeting

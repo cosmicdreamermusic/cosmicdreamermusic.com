@@ -30,6 +30,22 @@ module.exports = function(grunt) {
       }
     },
 
+    watch: {
+      sass: {
+        files: ['_sass/**/*.scss','css/**/*.scss'],
+        tasks: ['sass']
+      }
+    },
+
+    concurrent: {
+      all: {
+        tasks: ['shell:jekyllServe', 'watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+
     scsslint: {
       allFiles: [
         'css/*.scss',
@@ -59,7 +75,7 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', [
     'sass',
     'uglify:picturefill',
-    'shell:jekyllServe'
+    'concurrent:all'
   ]);
 
   grunt.registerTask('build', [

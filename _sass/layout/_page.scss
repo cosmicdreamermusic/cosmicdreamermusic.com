@@ -4,13 +4,26 @@
 
 
 
+.row {
+  width: 100%;
+  max-width: rem-calc(1280);
+  margin: 0 auto;
+  padding: rem-calc(0 20);
+
+  @include at-least(small) {
+    padding: rem-calc(0 40);
+  }
+}
+
 .page {
   position: relative;
-  max-width: rem-calc(1400);
-  margin: 0 auto;
+  min-height: 100%;
+  margin-bottom: -(rem-calc(200));
 
-  @include at-least(large) {
-    border: rem-calc(60) solid $color-white;
+  &:after {
+    display: block;
+    height: rem-calc(200);
+    content: "";
   }
 }
 
@@ -54,7 +67,7 @@
 .site-logo > svg > .expand {
   display: none;
 
-  @media (min-width: rem-calc(750)) {
+  @media (min-width: rem-calc(550)) {
     display: block;
   }
 }
@@ -64,17 +77,76 @@
 // Body
 // --------------------------------------------------------------------------
 
+.page-body {
+  padding: rem-calc(20 0);
+
+  @include at-least(small) {
+    padding: rem-calc(40 0);
+  }
+}
+
 .page-title {
-  margin: rem-calc(20 0);
-  padding: rem-calc(0 20);
-  font-size: $font-size-kilo;
+  margin: rem-calc(0 0 20);
+  color: rgba($color-dark-grey, .8);
+  font-size: $font-size-alpha;
+  font-weight: 400;
   text-transform: uppercase;
 
   @include at-least(small) {
-    margin: rem-calc(40 0);
-    padding: rem-calc(0 40);
-    font-size: $font-size-mega;
+    margin-bottom: rem-calc(40);
+    font-size: $font-size-kilo;
   }
+}
+
+.page-section-header {
+  margin: rem-calc(0 0 20);
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+
+  @include at-least(small) {
+    margin-bottom: rem-calc(40);
+    font-size: $font-size-beta;
+  }
+
+  &--margin {
+    margin-top: rem-calc(60);
+
+    @include at-least(small) {
+      margin-top: rem-calc(80);
+    }
+  }
+}
+
+.page-content {
+  &--news {
+    margin-bottom: rem-calc(60);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.page-content > p {
+  font-size: $font-size-gamma;
+}
+
+.page-content a {
+  color: $color-light-blue;
+}
+
+.page-content-photo {
+  display: inline-block;
+  margin: 0;
+  padding: rem-calc(10);
+  border: 1px solid rgba($color-dark-grey, 0.125);
+}
+
+.page-content-photo > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .page-quote {
@@ -108,31 +180,25 @@
 .page-footer {
   display: table;
   width: 100%;
-  padding: rem-calc(40 20);
-  background: rgba($color-white, .95);
+  height: rem-calc(200);
+  padding: rem-calc(0 20);
+  background: $color-smoke;
   color: rgba($color-dark-grey, .8);
-
-  @include at-least(small) {
-    padding: rem-calc(60 40);
-  }
 }
 
 .page-footer-meta,
-.page-footer-links {
+.page-footer-logo {
   display: table-cell;
   vertical-align: middle;
 }
 
-.page-footer-links {
-  text-align: right;
+.page-footer-logo {
+  width: rem-calc(40);
+  padding-right: rem-calc(10);
 }
 
-.page-footer-icon-link {
-  display: inline-block;
-  opacity: .8;
-  vertical-align: middle;
-
-  > svg {
-    display: block;
-  }
+.page-footer-logo > svg {
+  display: block;
+  width: rem-calc(50);
+  height: rem-calc(50);
 }

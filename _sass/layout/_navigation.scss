@@ -35,7 +35,7 @@
   background-color: rgba($color-dark-grey, .96);
   list-style: none;
 
-  @include at-least(small) {
+  @media (min-width: rem-calc(875)) {
     display: block;
     position: static;
     padding: 0;
@@ -47,8 +47,9 @@
 .navigation-list > li {
   display: block;
   margin-bottom: rem-calc(10);
+  vertical-align: middle;
 
-  @include at-least(small) {
+  @media (min-width: rem-calc(875)) {
     display: inline-block;
     margin: rem-calc(0 0 0 20);
   }
@@ -58,7 +59,7 @@
   }
 }
 
-.navigation-list a {
+.navigation-list > li > a {
   display: block;
   height: rem-calc(40);
   color: $color-white;
@@ -66,12 +67,44 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @include at-least(small) {
+  @media (min-width: rem-calc(875)) {
     font-size: $font-size-gamma;
     line-height: rem-calc(40);
   }
 }
 
+
+
+// Social navigation menu
+// --------------------------------------------------------------------------
+
+.social-navigation-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-navigation-list > li {
+  display: inline-block;
+  margin-right: rem-calc(5);
+  vertical-align: middle;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.social-navigation-list a {
+  display: block;
+  padding: rem-calc(5);
+  background: rgba(#fff,0.25);
+  border-radius: 50%;
+}
+
+.social-navigation-list > li svg {
+  display: block;
+}
 
 
 // Toggle
@@ -86,7 +119,7 @@
   padding: 0;
   background-color: $color-light-blue;
 
-  @include at-least(small) {
+  @media (min-width: rem-calc(875)) {
     display: none;
   }
 }

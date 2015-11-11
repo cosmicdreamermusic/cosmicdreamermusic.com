@@ -1,0 +1,10 @@
+<ul class="news-list">
+  {% for post in site.categories.news %}
+    <li>
+      <h4 class="news-list-date">{{ post.date | date: '%B %d' }}</h4>
+      <a class="news-list-link" href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,29 @@
+// ==========================================================================
+// SHOWS
+// ==========================================================================
+
+
+
+// List
+// --------------------------------------------------------------------------
+
+.shows-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shows-list > li {
+  display: block;
+  margin-bottom: rem-calc(20);
+  padding: rem-calc(10 0);
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}

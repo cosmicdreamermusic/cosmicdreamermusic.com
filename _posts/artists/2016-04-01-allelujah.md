@@ -7,6 +7,7 @@ release: April, 2016
 cover: CDM003
 artist-photo: allelujah
 catalog: CDM003
+formats: LP / Digital
 bio: false
 tracks:
 - Alright, Alright

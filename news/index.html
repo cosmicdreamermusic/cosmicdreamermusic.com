@@ -1,0 +1,22 @@
+---
+layout: page
+title: News
+---
+
+{% for post in site.categories.news %}
+  <h4>{{ post.date | date: '%B %d' }}</h4>
+  <h2 class="news-title">{{ post.title }}</h2>
+  <div class="page-content page-content--news">
+    {% if post.photo %}
+      <figure class="page-content-photo">
+        <img src="{{ site.baseurl }}/img/{{ post.photo }}" alt="{{ post.title }}">
+      </figure>
+    {% endif %}
+    {% if post.video %}
+      <div class="video-embed">
+        <iframe src="{{ post.video }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+    {{ post.content }}
+  </div>
+{% endfor %}

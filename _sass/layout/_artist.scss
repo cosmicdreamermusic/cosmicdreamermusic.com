@@ -26,7 +26,7 @@
 
 .album-artist {
   margin-bottom: rem-calc(30);
-  color: rgba($color-white, .6);
+  color: rgba($color-dark-grey, .6);
   font-size: $font-size-beta;
   font-weight: 400;
   text-transform: uppercase;
@@ -44,7 +44,7 @@
 
 .album-release {
   margin-bottom: rem-calc(50);
-  color: rgba($color-white, .4);
+  color: rgba($color-dark-grey, .4);
   font-size: $font-size-delta;
   font-weight: 400;
   letter-spacing: rem-calc(2);
@@ -56,7 +56,7 @@
   }
 
   > b {
-    color: rgba($color-white, .2);
+    color: rgba($color-dark-grey, .2);
     font-weight: 400;
   }
 }
@@ -71,16 +71,16 @@
   }
 
   > li {
-    color: rgba($color-white, .8);
-    font-size: $font-size-beta;
+    color: rgba($color-dark-grey, .8);
+    font-size: $font-size-gamma;
     text-transform: uppercase;
 
     @include at-least(small) {
-      font-size: $font-size-alpha;
+      font-size: $font-size-beta;
     }
 
     @include at-least(medium) {
-      font-size: $font-size-kilo;
+      font-size: $font-size-alpha;
     }
   }
 }
@@ -89,9 +89,10 @@
   display: inline-block;
   margin-bottom: rem-calc(60);
   border: rem-calc(20) solid $color-white;
+  box-shadow: 0 0 1px 1px rgba($color-dark-grey, 0.125);
 
   @include at-least(medium) {
-    max-width: rem-calc(600);
+    max-width: rem-calc(500);
     border-width: rem-calc(40);
   }
 
@@ -108,6 +109,12 @@
 // --------------------------------------------------------------------------
 
 .album .artist-photo {
+  margin: 0 auto;
+
+  @include at-least(small) {
+    max-width: rem-calc(760);
+  }
+
   > img {
     display: block;
     width: 100%;
@@ -118,22 +125,20 @@
 .album .artist-bio {
   padding: rem-calc(20);
   text-align: left;
+
+  @include at-least(small) {
+    max-width: rem-calc(800);
+    margin: 0 auto;
+  }
 }
 
 .artist-bio > p {
   margin: rem-calc(0 0 20);
-  color: rgba($color-white, .8);
+  color: rgba($color-dark-grey, .8);
+  font-size: $font-size-gamma;
 
   @include at-least(small) {
     font-size: $font-size-beta;
-  }
-
-  @include at-least(medium) {
-    font-size: $font-size-alpha;
-  }
-
-  @include at-least(large) {
-    font-size: $font-size-kilo;
   }
 
   &:last-child {
@@ -143,7 +148,7 @@
 
 .artist-bio-header {
   margin: rem-calc(0 0 10);
-  color: rgba($color-white, .6);
+  color: rgba($color-dark-grey, .6);
   font-size: $font-size-beta;
   font-style: italic;
   font-weight: 300;
@@ -163,16 +168,4 @@
 
 .album .artist-photo + .artist-bio {
   padding: rem-calc(40 20);
-
-  @include at-least(small) {
-    padding: rem-calc(40);
-  }
-
-  @include at-least(medium) {
-    padding: rem-calc(60 100);
-  }
-
-  @include at-least(large) {
-    padding: rem-calc(80 160);
-  }
 }

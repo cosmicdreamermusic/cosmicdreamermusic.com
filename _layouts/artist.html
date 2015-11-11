@@ -4,41 +4,42 @@ layout: default
 
 {% include page-header.html %}
 <div class="page-body">
-  <div class="album">
-    <h2 class="album-title">{{ page.title }}</h2>
-    <h2 class="album-artist"><b>by</b> {{ page.artist }}</h2>
-    <h3 class="album-release">{{ page.release }} <b>{{ page.catalog }}</b></h3>
-    <div class="album-cover">
-      <img
-        src="{{ site.baseurl }}/img/{{ page.cover }}_sm.jpg" width="400" height="400"
-        srcset="{{ site.baseurl }}/img/{{ page.cover }}_med.jpg 600w,
-                {{ site.baseurl }}/img/{{ page.cover }}_sm.jpg 400w"
-        sizes="(min-width: 40.625rem) 50vw,
-              100vw"
-        alt="{{ page.title }}"
-      />
+  <div class="row">
+    <div class="album">
+      <h2 class="album-title">{{ page.title }}</h2>
+      <h2 class="album-artist"><b>by</b> {{ page.artist }}</h2>
+      <h3 class="album-release">{{ page.release }} <b>{{ page.catalog }}</b></h3>
+      <div class="album-cover">
+        <img
+          src="{{ site.baseurl }}/img/{{ page.cover }}_sm.jpg" width="400" height="400"
+          srcset="{{ site.baseurl }}/img/{{ page.cover }}_med.jpg 600w,
+                  {{ site.baseurl }}/img/{{ page.cover }}_sm.jpg 400w"
+          sizes="(min-width: 40.625rem) 50vw,
+                100vw"
+          alt="{{ page.title }}"
+        />
+      </div>
+      <ul class="album-tracks">
+        {% for track in page.tracks %}
+          <li>{{ track }}</li>
+        {% endfor %}
+      </ul>
+      <div class="artist-photo">
+        <img
+          src="{{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg"
+          srcset="{{ site.baseurl }}/img/{{ page.artist-photo }}.jpg 800w,
+                  {{ site.baseurl }}/img/{{ page.artist-photo }}_med.jpg 600w,
+                  {{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg 400w"
+          sizes="(min-width: 40.625rem) 50vw, 100vw"
+          alt="{{ page.artist }}"
+        />
+      </div>
+      {% if page.bio %}
+      <div class="artist-bio">
+        <h3 class="artist-bio-header">About {{ page.artist }}</h3>
+        {{ content }}
+      </div>
+      {% endif %}
     </div>
-    <ul class="album-tracks">
-      {% for track in page.tracks %}
-        <li>{{ track }}</li>
-      {% endfor %}
-    </ul>
-    <div class="artist-photo">
-      <img
-        src="{{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg"
-        srcset="{{ site.baseurl }}/img/{{ page.artist-photo }}.jpg 800w,
-                {{ site.baseurl }}/img/{{ page.artist-photo }}_med.jpg 600w,
-                {{ site.baseurl }}/img/{{ page.artist-photo }}_sm.jpg 400w"
-        sizes="(min-width: 40.625rem) 50vw,
-              100vw"
-        alt="{{ page.artist }}"
-      />
-    </div>
-    {% if page.bio %}
-    <div class="artist-bio">
-      <h3 class="artist-bio-header">About {{ page.artist }}</h3>
-      {{ content }}
-    </div>
-    {% endif %}
   </div>
 </div>

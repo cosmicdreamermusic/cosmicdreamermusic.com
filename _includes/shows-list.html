@@ -1,0 +1,13 @@
+<ul class="news-list">
+  {% for post in site.categories.shows %}
+    <li>
+      <h4>{{ post.date | date: '%B %d' }}</h4>
+      <p>
+        <strong>{{ post.artist }}</strong><br>
+        {{ post.venue }}<br>
+        {{ post.city }}<br>
+        {{ post.time }}
+      </p>
+    </li>
+  {% endfor %}
+</ul>

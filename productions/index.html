@@ -1,18 +1,18 @@
 ---
 layout: page
-title: Videos
+title: Cosmic Dreamer Productions
 ---
 
 <div class="videos">
   <ul class="videos-list">
     {% for post in site.categories.videos %}
     <li class="video">
-      <div class="video-meta">
-        <span class="video-title"><b>{{ post.artist }}</b> - {{ post.title }}</span>
-        <p class="video-description">{{ post.description }}</p>
-      </div>
       <div class="video-embed">
         <iframe src="{{ post.link }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-meta">
+        <span class="video-title">{% if post.artist %}<b>{{ post.artist }}</b> - {% endif %}{{ post.title }}</span>
+        <p class="video-description">{{ post.description }}</p>
       </div>
     </li>
     {% endfor %}

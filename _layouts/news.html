@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include page-header.html %}
+<div class="page-body">
+  <div class="row">
+    <h4>{{ page.date | date: '%B %d' }}</h4>
+    <h2 class="news-title">{{ page.title }}</h2>
+    <div class="page-content">
+      {% if page.photo %}
+        <figure class="page-content-photo">
+          <img src="{{ site.baseurl }}/img/{{ page.photo }}" alt="{{ page.title }}">
+        </figure>
+      {% endif %}
+      {% if page.video %}
+        <div class="video-embed">
+          <iframe src="{{ page.video }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {{ content }}
+    </div>
+  </div>
+</div>
