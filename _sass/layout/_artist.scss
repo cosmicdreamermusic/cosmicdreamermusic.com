@@ -89,7 +89,7 @@
   display: inline-block;
   margin-bottom: rem-calc(60);
   border: rem-calc(20) solid $color-white;
-  box-shadow: 0 0 1px 1px rgba($color-dark-grey, 0.125);
+  box-shadow: 0 0 1px 1px rgba($color-dark-grey, .125);
 
   @include at-least(medium) {
     max-width: rem-calc(500);

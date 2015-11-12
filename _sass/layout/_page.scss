@@ -18,12 +18,12 @@
 .page {
   position: relative;
   min-height: 100%;
-  margin-bottom: -(rem-calc(200));
+  margin-bottom: -(rem-calc(150));
 
   &:after {
     display: block;
-    height: rem-calc(200);
-    content: "";
+    height: rem-calc(150);
+    content: '';
   }
 }
 
@@ -81,7 +81,7 @@
   padding: rem-calc(20 0);
 
   @include at-least(small) {
-    padding: rem-calc(40 0);
+    padding: rem-calc(20 0 40);
   }
 }
 
@@ -101,19 +101,19 @@
 .page-section-header {
   margin: rem-calc(0 0 20);
   padding: 0;
-  text-transform: uppercase;
   font-weight: 400;
+  text-transform: uppercase;
 
   @include at-least(small) {
-    margin-bottom: rem-calc(40);
+    margin-bottom: rem-calc(20);
     font-size: $font-size-beta;
   }
 
   &--margin {
-    margin-top: rem-calc(60);
+    margin-top: rem-calc(20);
 
     @include at-least(small) {
-      margin-top: rem-calc(80);
+      margin-top: rem-calc(40);
     }
   }
 }
@@ -137,14 +137,20 @@
 }
 
 .page-content-photo {
-  display: inline-block;
+  display: block;
+  width: 100%;
   margin: 0;
   padding: rem-calc(10);
-  border: 1px solid rgba($color-dark-grey, 0.125);
+  border: 1px solid rgba($color-dark-grey, .125);
+
+  @include at-least(small) {
+    max-width: rem-calc(600);
+  }
 }
 
 .page-content-photo > img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -180,7 +186,7 @@
 .page-footer {
   display: table;
   width: 100%;
-  height: rem-calc(200);
+  height: rem-calc(150);
   padding: rem-calc(0 20);
   background: $color-smoke;
   color: rgba($color-dark-grey, .8);
