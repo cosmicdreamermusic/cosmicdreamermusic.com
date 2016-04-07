@@ -4,9 +4,15 @@
       <h4>{{ post.date | date: '%B %d' }}</h4>
       <p>
         <strong>{{ post.artist }}</strong><br>
+        {% if post.opener %}
+          w/ {{ post.opener }}<br>
+        {% endif %}
         {{ post.venue }}<br>
         {{ post.city }}<br>
-        {{ post.time }}
+        {{ post.time }}<br>
+        {% if post.cost %}
+          {{ post.cost }}<br>
+        {% endif %}
       </p>
     </li>
   {% endfor %}

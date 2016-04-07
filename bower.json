@@ -8,6 +8,7 @@
   "description": "Cosmic Dreamer Music",
   "private": true,
   "devDependencies": {
-    "picturefill": "scottjehl/picturefill#~3.0.1"
+    "picturefill": "scottjehl/picturefill#~3.0.1",
+    "loadcss": "~0.2.4"
   }
 }

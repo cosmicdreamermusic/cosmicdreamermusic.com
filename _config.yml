@@ -4,12 +4,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cosmicdreamermusic.com" # the base hostname & protocol for your site
 permalink: none
 
-exclude: [deploy.sh, s3_website.yml, node_modules, bower_components, bower.json, GEMFILE, Gemfile.lock, Gruntfile.js, package.json, README.md]
+exclude: [css, _sass, deploy.sh, s3_website.yml, node_modules, bower_components, bower.json, GEMFILE, Gemfile.lock, Gruntfile.js, package.json, README.md]
 
-minify_html: false
-
-sass:
-  style: compressed
-
-gems:
-  - octopress-autoprefixer
+keep_files: ['_site/css']

@@ -13,8 +13,14 @@
   list-style: none;
 
   @include at-least(small) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
   }
 }

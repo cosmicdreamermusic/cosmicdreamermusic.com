@@ -35,7 +35,7 @@
   background-color: rgba($color-dark-grey, .96);
   list-style: none;
 
-  @media (min-width: rem-calc(1085)) {
+  @media (min-width: rem-calc(1160)) {
     display: block;
     position: static;
     padding: 0;
@@ -49,7 +49,7 @@
   margin-bottom: rem-calc(10);
   vertical-align: middle;
 
-  @media (min-width: rem-calc(1085)) {
+  @media (min-width: rem-calc(1160)) {
     display: inline-block;
     margin: rem-calc(0 0 0 20);
   }
@@ -67,7 +67,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: rem-calc(1085)) {
+  @media (min-width: rem-calc(1160)) {
     font-size: $font-size-gamma;
     line-height: rem-calc(40);
   }
@@ -119,7 +119,7 @@
   padding: 0;
   background-color: $color-light-blue;
 
-  @media (min-width: rem-calc(1075)) {
+  @media (min-width: rem-calc(1160)) {
     display: none;
   }
 }

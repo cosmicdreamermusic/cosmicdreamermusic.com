@@ -5,7 +5,10 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style type="text/css">{% include critical.css %}</style>
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css">
   {% include google-web-fonts.html %}
+  <script>{% include loadCSS.js %}</script>
   <script src="{{ site.baseurl }}/js/picturefill.min.js" async></script>
+  <script>
+    loadCSS("{{ site.baseurl }}/css/styles.css");
+  </script>
 </head>

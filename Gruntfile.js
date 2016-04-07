@@ -25,15 +25,28 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          '_site/css/styles.css': '_sass/styles.scss',
           '_includes/critical.css': '_sass/critical.scss'
         }
+      }
+    },
+
+    postcss: {
+      options: {
+        map: true,
+        processors: [
+          require('autoprefixer')({browsers: ['last 2 versions']})
+        ]
+      },
+      dist: {
+        src: ['_site/css/*.css', '_includes/critical.css']
       }
     },
 
     watch: {
       sass: {
         files: ['_sass/**/*.scss','css/**/*.scss'],
-        tasks: ['sass']
+        tasks: ['sass','postcss']
       }
     },
 
@@ -66,7 +79,8 @@ module.exports = function(grunt) {
     uglify: {
       picturefill: {
         files: {
-          'js/picturefill.min.js': 'bower_components/picturefill/dist/picturefill.min.js'
+          'js/picturefill.min.js': 'bower_components/picturefill/dist/picturefill.min.js',
+          '_includes/loadCSS.js': 'bower_components/loadcss/loadCSS.js'
         }
       }
     }
@@ -74,21 +88,24 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', [
     'sass',
+    'postcss',
     'uglify:picturefill',
     'concurrent:all'
   ]);
 
   grunt.registerTask('build', [
     'sass',
+    'postcss',
     'uglify:picturefill',
-    'scsslint',
+    //'scsslint',
     'shell:jekyllBuild'
   ]);
 
   grunt.registerTask('deploy', [
     'sass',
+    'postcss',
     'uglify:picturefill',
-    'scsslint',
+    //'scsslint',
     'shell:jekyllBuild',
     'shell:jekyllDeploy'
   ]);

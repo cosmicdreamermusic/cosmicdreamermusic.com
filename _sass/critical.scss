@@ -20,12 +20,8 @@
 
 // Components
 @import 'components/albums-list';
-@import 'components/logo-banner';
+@import 'components/news-list';
 
 // Layout
 @import 'layout/navigation';
 @import 'layout/page';
-
-body {
-  font-size: 14px;
-}
